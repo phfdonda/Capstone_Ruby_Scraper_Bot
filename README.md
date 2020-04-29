@@ -1,6 +1,6 @@
 # Project Name
 
-> One paragraph statement about the project.
+> I want to create a CICD - Continuous Integration Continuous Deployment application. 
 
 ![screenshot](./app_screenshot.png)
 
