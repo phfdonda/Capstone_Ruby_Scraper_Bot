@@ -3,6 +3,7 @@
 require 'nokogiri'
 require 'httparty'
 require 'byebug'
+require_relative '../lib/script.rb'
 
 def scraper
   url = 'http://www.adorocinema.com/series-tv/top/'
