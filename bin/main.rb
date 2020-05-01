@@ -1,35 +1,24 @@
 # frozen_string_literal: true
 
-require 'nokogiri'
-require 'httparty'
-require 'byebug'
-require_relative '../lib/script.rb'
+require_relative '../lib/scraper.rb'
+require 'telegram/bot'
+require 'pry'
 
-def scraper
-  url = 'http://www.adorocinema.com/series-tv/top/'
-  unparsed_page = HTTParty.get(url)
-  parsed_page = Nokogiri::HTML(unparsed_page)
-  articles = parsed_page.css('li.mdl')
-  review_count = 0
-  reviews = []
-  while review_count < 100
-    articles.each do |article|
-      review = {
-        title: article.css('a.meta-title-link').text,
-        release: article.css('div.meta-body-info').text.gsub("\n", '').gsub('  ', '').gsub('Desde ', '').split('/')[0],
-        duration: article.css('div.meta-body-info').text.gsub("\n", '').gsub('  ', '').split('/')[1],
-        genre: article.css('div.meta-body-info').text.gsub("\n", '').gsub('  ', '').split('/')[2],
-        director: article.css('div.meta-body-direction').text.gsub('  ', '').gsub("\n", '').gsub('Direção:', ''),
-        cast: article.css('div.meta-body-actor').text.gsub('  ', '').gsub("\n", '').gsub('Elenco:', ''),
-        review_text: article.css('div.content-txt').text.gsub('  ', '').gsub("\n", ''),
-        stars: article.css('span.stareval-note').text.gsub('--', '').gsub(',', '.').to_f
-      }
-      reviews << review && review_count += 1 if review[:stars] > 4.2
-      break if reviews.count == 100
+token = '1153156372:AAHtfskDwLpH9WbRw7yxVsiWfqlNCi26_yA'
+
+Telegram::Bot::Client.run(token) do |bot|
+  bot.listen do |message|
+    case message.text
+    when '/start'
+      sugestao = scraper
+      bot.api.send_message(chat_id: message.chat.id, text: 'Oi! Peraí, deixa eu pausar minha série aqui, só um instante...')
+      bot.api.send_message(chat_id: message.chat.id, text: 'Beleza, pausei! Série boa, olha! Quer uma sugestão? Assiste essa aí!')
+      bot.api.send_message(chat_id: message.chat.id, text: "O nome dela é #{sugestao[:title]}.")
+      bot.api.send_message(chat_id: message.chat.id, text: "Ela foi dirigida por #{sugestao[:director]} em #{sugestao[:release]}, e tem atores bons como #{sugestao[:cast]}. Mas não sou só eu falando não!")
+      bot.api.send_message(chat_id: message.chat.id, text: "Ela tem nota #{sugestao[:stars]} no site AdoroCinema, ok?")
+      bot.api.send_message(chat_id: message.chat.id, text: 'Bem, quer um resumo? Lá vai:')
+      bot.api.send_message(chat_id: message.chat.id, text: (sugestao[:review_text]).to_s)
+      bot.api.send_message(chat_id: message.chat.id, text: 'Vale a pena dar uma checada! Assiste o primeiro episódio, vai que gosta? Bem, é isso. Vou voltar pra minha série, ok? Falou!')
     end
   end
-  byebug
-  
 end
-
-scraper
