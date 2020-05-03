@@ -28,6 +28,6 @@ def scraper
     end
   end
   reviews[rand(0...100)]
-end
+  end
 
 scraper

@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 require_relative '../lib/scraper.rb'
-require_relative '../lib/script.rb'
 require 'telegram/bot'
 require 'pry'
-require 
+require 'yaml'
 
-Telegram::Bot::Client.run(token) do |bot|
+CONFIG = YAML.load_file('botflix.config.yaml')
+
+Telegram::Bot::Client.run(CONFIG['token']) do |bot|
   bot.listen do |message|
     case message.text
     when '/start'
