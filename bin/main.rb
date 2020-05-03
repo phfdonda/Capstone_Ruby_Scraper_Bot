@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 require_relative '../lib/scraper.rb'
+require_relative '../lib/script.rb'
 require 'telegram/bot'
 require 'pry'
-
-token = '1153156372:AAHtfskDwLpH9WbRw7yxVsiWfqlNCi26_yA'
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
