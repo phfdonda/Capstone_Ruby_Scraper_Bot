@@ -2,9 +2,10 @@
 
 require_relative '../lib/scraper.rb'
 require 'telegram/bot'
+require 'yaml'
 require 'pry'
 
-token = '1153156372:AAHtfskDwLpH9WbRw7yxVsiWfqlNCi26_yA'
+token = YAML.load_file(File.join(__dir__, 'config.yaml'))[:token]
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
