@@ -42,7 +42,6 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  configatron
   httparty
   nokogiri
   telegram-bot-ruby
