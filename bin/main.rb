@@ -4,6 +4,7 @@ require_relative '../lib/scraper.rb'
 require_relative '../lib/script.rb'
 require 'telegram/bot'
 require 'pry'
+require 
 
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
