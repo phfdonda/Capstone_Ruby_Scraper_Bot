@@ -2,7 +2,6 @@
 
 require 'nokogiri'
 require 'httparty'
-require 'byebug'
 
 def scraper
   url = 'http://www.adorocinema.com/series-tv/top/'
