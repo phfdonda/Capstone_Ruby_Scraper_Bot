@@ -38,13 +38,13 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
- Lint/RaiseException
+Lint/RaiseException
   Enabled: false
- Lint/StructNewOverride
+Lint/StructNewOverride
   Enabled: false
- Style/HashEachMethods
+Style/HashEachMethods
   Enabled: false
- Style/HashTransformKeys
+Style/HashTransformKeys
   Enabled: false
- Style/HashTransformValues
+Style/HashTransformValues
   Enabled: false
