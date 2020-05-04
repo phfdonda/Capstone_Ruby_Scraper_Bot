@@ -51,8 +51,12 @@ The messages are filled with information that have been scraped from the portal,
 ### Run tests
 We have only one method for this project, the scraper method. It is supposed to retrieve a Hash containing the values scraped from the website, and the spec files test that.
 
-### Deployment
-
+### Summary of project and Deployment
+This is my Capstone Project for the Ruby Section, and it was required of me to do a scraper bot that was able to retrieve data from a website from my choice, in a way that was useful to my personal life.
+That's why I chose to make a bot that took, from my favorite review's portal, AdoroCinema.com.br, 100 series that matched these two criteria: that were the most recent; and that had an evaluation of 4.3 stars out of 5, or more. That way I wouldn't have to be searching by myself the latest series and searching for the good ones. My Botflix would do that for me.
+The last step is to avoid indecision. When we have lots of options, we get anxious to have to choose, and a bit of the fun is lost. When someone presents only one choice each turn and you get to say only "yes" or "no", life gets easier. So the bot will randomly take one of those 100 and present that as a suggestion.
+To make all this a more "round" product and cover all edges, I added the chatbot of Telegram, even though it's not a requirement so that a non-programmer user can ask for a suggestion. You can run the code and then send a message to @botflixbot on telegram to receive a suggestion.
+The next step (improvement for later) is going to be to put it online on a server to deploy it 24/7, like on Heroku. 
 
 
 ## Authors
