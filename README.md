@@ -2,7 +2,7 @@
 
 > Are you tired of swiping around searching for the next series to watch during this quarantine? You don't have to read hundreds of summaries to try to guess if a series is good or not. Botflix gives you a suggestion based on reviews of hundreds of users of the AdoroCinema website, and only suggests those of high grades (4.3 or higher up to 5). It retrieves the 100 most recent ones, so they're all freshly baked, and picks one by random so you don't even have to tire your head deciding anything! You're in for a treat!
 
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot.jpg)
 
 Botflix is a scraper built with Ruby, more specifically with the gems 'nokogiri' and 'httparty', in order to retrieve data from the website AdoroCinema. This site is a reviews portal, a brazilian "Rotten Tomatoes" of sorts, that gathers critiques and reviews from professionals and public in general alike. 
 I have built the algorith of Botflix in a way that it takes the 100 most recent series (by addressing their page of most recent series) that ALSO have 4.3 or more stars of evaluation. After gathering their information, it picks one of them randomly, and returns this series as a suggestion for the user. 
