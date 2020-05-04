@@ -32,12 +32,24 @@ You are going to have to install certain gems to be able to use this project. Th
 ##### [telegram-bot-ruby](https://github.com/telegram-bot-rb/telegram-bot)
 ##### [nokogiri](https://nokogiri.org/tutorials/installing_nokogiri.html#install-with-included-libraries-recommended)
 ##### [httparty](https://github.com/jnunemaker/httparty)
-To install all of those, you can use Bundler, by just running ```bundle install``` after writing "gem <name-of-the-gem>" for each of the gems in the Gemfile file. To learn more about how to do that, [follow this link](https://bundler.io/v2.0/man/bundle-install.1.html). 
+To install all of those, you can use Bundler, by just running ```bundle install``` after defining the gems in the Gemfile file. To learn more about how to do that, [follow this link](https://bundler.io/v2.0/man/bundle-install.1.html). 
 
 ### Usage
-The executable is located in the bin folder, and is called main.rb. Open the terminal and cd to the path where you download the Capstone project. It should be something like: ```User/<folder>/Capstone_Ruby_Scraper_Bot/```. Go to the 'bin' folder, and run the 'main' file. It will start a server
+The executable is located in the bin folder, and is called main.rb. Open the terminal and cd to the path where you download the Capstone project. It should be something like: ```User/<folder>/Capstone_Ruby_Scraper_Bot/```. Go to the 'bin' folder, and run the 'main' file. It will start a server. After that, if a user sends a message with '/start' to @botflixbot in Telegram, it will respond with a series of messages giving a suggestion. 
+The messages are all in portuguese, because the users are supposed to be brazilians, but here are the messages translated to English - at least the standard parts, not the content retrieved from the website.
+##### "Hey! Wait a minute, let me pause my series here, just a sec."
+##### "Ok, just paused it. Wow, it's a series to nail you on the couch! Want a suggestion? Watch this one!"
+##### "It's name is [title]"
+##### "It was directed by [director] and has good actors like [cast]. But it's not just me talking!"
+##### "It has a grade of [stars] in the AdoroCinema review's portal, ok?"
+##### "Well, do you want a summary? Here it is:"
+##### "[summary]"
+##### "Worth a check! Watch the first episode, you might like it! Well, that's it! I'll go back to my series! See ya!"
+
+The messages are filled with information that have been scraped from the portal, like title, director, cast, summary, evaluation, etc. That way the user can have a quick access to a good review of a series without having to look through so many options.
 
 ### Run tests
+We have only one method for this project, the scraper method. It is supposed to retrieve a Hash containing the values scraped from the website, and the spec files test that.
 
 ### Deployment
 
@@ -45,11 +57,13 @@ The executable is located in the bin folder, and is called main.rb. Open the ter
 
 ## Authors
 
-👤 **Author1**
+👤 **Pedro Henrique Ferreira Donda**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+
+
+Github - [@phfhdonda](https://github.com/phfdonda)
+
+LinkedIn - [PedroDonda](https://www.linkedin.com/in/pedro-donda-808621bb/)
 
 ## 🤝 Contributing
 
