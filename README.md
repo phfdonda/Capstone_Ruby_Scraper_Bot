@@ -32,10 +32,10 @@ You are going to have to install certain gems to be able to use this project. Th
 ##### [telegram-bot-ruby](https://github.com/telegram-bot-rb/telegram-bot)
 ##### [nokogiri](https://nokogiri.org/tutorials/installing_nokogiri.html#install-with-included-libraries-recommended)
 ##### [httparty](https://github.com/jnunemaker/httparty)
-To install all of those, you can use Bundler, by just running ```bundle install``` after defining the gems in the Gemfile file. To learn more about how to do that, [follow this link](https://bundler.io/v2.0/man/bundle-install.1.html). 
+To install all of those, you can use Bundler, by just running ```bundle install``` after defining the gems in the Gemfile file. To learn more about how to do that, [follow this link](https://bundler.io/v2.0/man/bundle-install.1.html).
 
 ### Usage
-The executable is located in the bin folder, and is called main.rb. Open the terminal and cd to the path where you download the Capstone project. It should be something like: ```User/<folder>/Capstone_Ruby_Scraper_Bot/```. Go to the 'bin' folder, and run the 'main' file. It will start a server. After that, if a user sends a message with '/start' to @botflixbot in Telegram, it will respond with a series of messages giving a suggestion. 
+The executable is located in the bin folder, and is called main.rb. Open the terminal and cd to the path where you download the Capstone project. It should be something like: ```User/<folder>/Capstone_Ruby_Scraper_Bot/```. Go to the 'bin' folder, and run the 'main' file. It will start a server. After that, if a user sends a message with '/start' to @botflixbot in Telegram, it will respond with a series of messages giving a suggestion.
 The messages are all in portuguese, because the users are supposed to be brazilians, but here are the messages translated to English - at least the standard parts, not the content retrieved from the website.
 ##### "Hey! Wait a minute, let me pause my series here, just a sec."
 ##### "Ok, just paused it. Wow, it's a series to nail you on the couch! Want a suggestion? Watch this one!"
@@ -48,14 +48,16 @@ The messages are all in portuguese, because the users are supposed to be brazili
 
 The messages are filled with information that have been scraped from the portal, like title, director, cast, summary, evaluation, etc. That way the user can have a quick access to a good review of a series without having to look through so many options.
 
+You can run the code and then send a message to @botflixbot on telegram to receive a suggestion. For new suggestions, just send '/start' again (without the quotes) to activate the bot again. As long as the server in your computer is up, the bot will keep doing the scraping and giving you suggestions, one for each '/start' you send.
+
 ### Run tests
 We have only one method for this project, the scraper method. It is supposed to retrieve a Hash containing the values scraped from the website, and the spec files test that.
 
-### Summary of project and Deployment
+### Summary of Project and Deployment
 This is my Capstone Project for the Ruby Section, and it was required of me to do a scraper bot that was able to retrieve data from a website from my choice, in a way that was useful to my personal life.
 That's why I chose to make a bot that took, from my favorite review's portal, AdoroCinema.com.br, 100 series that matched these two criteria: that were the most recent; and that had an evaluation of 4.3 stars out of 5, or more. That way I wouldn't have to be searching by myself the latest series and searching for the good ones. My Botflix would do that for me.
 The last step is to avoid indecision. When we have lots of options, we get anxious to have to choose, and a bit of the fun is lost. When someone presents only one choice each turn and you get to say only "yes" or "no", life gets easier. So the bot will randomly take one of those 100 and present that as a suggestion.
-To make all this a more "round" product and cover all edges, I added the chatbot of Telegram, even though it's not a requirement so that a non-programmer user can ask for a suggestion. You can run the code and then send a message to @botflixbot on telegram to receive a suggestion.
+To make all this a more "round" product and cover all edges, I added the chatbot of Telegram, even though it's not a requirement, so that a non-programmer user can ask for a suggestion. 
 The next step (improvement for later) is going to be to put it online on a server to deploy it 24/7, like on Heroku. 
 
 

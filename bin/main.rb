@@ -27,6 +27,9 @@ Telegram::Bot::Client.run(token) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: script[6])
       bot.api.send_message(chat_id: message.chat.id, text: (sugestao[:review_text]).to_s)
       bot.api.send_message(chat_id: message.chat.id, text: script[7] + script[8])
+    else
+      script2 = ['Foi mal, o quê? Tô concentrado aqui.', 'Se precisar de outra indicação, manda um /start']
+      bot.api.send_message(chat_id: message.chat.id, text: script2[0] + script2[1])
     end
   end
 end
