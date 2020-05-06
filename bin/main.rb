@@ -62,16 +62,18 @@ when '2'
   another = ''
   until another == 'n'
     sugestao = sugestion
-    system 'clear'
+    puts
     sugestao.each { |x| puts x.center(120, ' ') }
     puts
     puts 'Gostou da idéia? Quer outra sugestão?'.center(120, ' ')
     puts
-    puts 'Escreve s pra Sim ou n pra Não'.center(120, ' ')
+    puts 'Digite s pra Sim ou n pra Não'.center(120, ' ')
     another = gets.chomp.strip.downcase
     until %w[s n].include?(another)
+      puts
       puts "Olha, é 's' pra 'SIM' ou 'n' pra 'NÃO'.".center(120, ' ')
       puts
+      another = gets.chomp.strip.downcase
     end
     puts 'Ok, boa série! Até!'.center(120, ' ')
     puts
@@ -80,5 +82,6 @@ when '2'
     puts 'Have a great day! =)'.center(120, ' ')
     puts
     puts
+
   end
 end

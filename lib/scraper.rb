@@ -1,8 +1,8 @@
 require 'nokogiri'
-require 'httparty'
+require 'http'
 
 def scraper
-  articles = Nokogiri::HTML(HTTParty.get('http://www.adorocinema.com/series-tv/top/')).css('li.mdl')
+  articles = Nokogiri::HTML(HTTP.get('http://www.adorocinema.com/series-tv/top/').to_s).css('li.mdl')
   reviews = []
   while reviews.count < 100
     articles.each do |article|
