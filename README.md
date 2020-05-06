@@ -37,6 +37,11 @@ To install all of those, you can use Bundler, by just running ```bundle install`
 ### Usage
 The executable is located in the bin folder, and is called main.rb. Open the terminal and cd to the path where you download the Capstone project. It should be something like: ```User/<folder>/Capstone_Ruby_Scraper_Bot/```. Go to the 'bin' folder, and run the 'main' file. It will start a server. After that, if a user sends a message with '/start' to @botflixbot in Telegram, it will respond with a series of messages giving a suggestion.
 The messages are all in portuguese, because the users are supposed to be brazilians, but here are the messages translated to English - at least the standard parts, not the content retrieved from the website.
+
+#### Telegram_Bot X Terminal_Bot
+You have the possibility to test this scraper in your own terminal. When you first run the code, it will ask you if you want to start the program as a Telegram bot or a Terminal bot, and you just have to press 1 for the first or 2 for the second. If you start as a Telegram bot, it will start a server and you will do the rest on Telegram. If you start the Terminal bot, you will receive the recommendation directly on your terminal, and you'll be prompted to say if you want another recommendation or not.
+Despite what option you choose, the text is practically the same. Here's a loose translation in English:
+
 ##### "Hey! Wait a minute, let me pause my series here, just a sec."
 ##### "Ok, just paused it. Wow, it's a series to nail you on the couch! Want a suggestion? Watch this one!"
 ##### "It's name is [title]"
@@ -45,6 +50,7 @@ The messages are all in portuguese, because the users are supposed to be brazili
 ##### "Well, do you want a summary? Here it is:"
 ##### "[summary]"
 ##### "Worth a check! Watch the first episode, you might like it! Well, that's it! I'll go back to my series! See ya!"
+
 
 The messages are filled with information that have been scraped from the portal, like title, director, cast, summary, evaluation, etc. That way the user can have a quick access to a good review of a series without having to look through so many options.
 
