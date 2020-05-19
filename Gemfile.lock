@@ -1,0 +1,73 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
+    coderay (1.1.2)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
+    equalizer (0.0.11)
+    faraday (1.0.1)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.12.2)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    http (4.4.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      http-parser (~> 1.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http-parser (1.2.1)
+      ffi-compiler (>= 1.0, < 2.0)
+    ice_nine (0.11.2)
+    inflecto (0.0.2)
+    method_source (1.0.0)
+    mini_portile2 (2.4.0)
+    multipart-post (2.1.1)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    public_suffix (4.0.4)
+    rake (13.0.1)
+    telegram-bot-ruby (0.12.0)
+      faraday
+      inflecto
+      virtus
+    thread_safe (0.3.6)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.7)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  http
+  nokogiri
+  pry
+  telegram-bot-ruby
+
+RUBY VERSION
+   ruby 2.6.3p62
+
+BUNDLED WITH
+   1.17.3
