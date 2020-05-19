@@ -4,7 +4,7 @@
 
 ![screenshot](./app_screenshot.jpg)
 
-Botflix is a scraper built with Ruby, more specifically with the gems 'nokogiri' and 'httparty', in order to retrieve data from the website AdoroCinema. This site is a reviews portal, a brazilian "Rotten Tomatoes" of sorts, that gathers critiques and reviews from professionals and public in general alike. 
+Botflix is a scraper built with Ruby, more specifically with the gems 'nokogiri' and 'http', in order to retrieve data from the website AdoroCinema. This site is a reviews portal, a brazilian "Rotten Tomatoes" of sorts, that gathers critiques and reviews from professionals and public in general alike. 
 I have built the algorith of Botflix in a way that it takes the 100 most recent series (by addressing their page of most recent series) that ALSO have 4.3 or more stars of evaluation. After gathering their information, it picks one of them randomly, and returns this series as a suggestion for the user. 
 For usage, the user only have to reach the bot through Telegram in @botflixbot.
 
